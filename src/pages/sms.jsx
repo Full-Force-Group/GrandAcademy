@@ -22,6 +22,8 @@ const Sms = () => {
             <SendSms />
           </div>
 
+          
+
 
         </div>
           <div className=' sm:hidden block h-[100vh] pt-[350px] text-center text-white text-[20px]' >

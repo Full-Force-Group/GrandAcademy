@@ -1,11 +1,13 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from '../modal/modal'
 
 const SendSms = () => {
     const TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4NDYsInJvbGUiOm51bGwsImRhdGEiOnsiaWQiOjM4NDYsIm5hbWUiOiJNdWhhbW1hZGpvbm92IE11aGFtbWFkaWxsb2ggQWJkdWx4b3NoaW0gbydnJ2xpIiwiZW1haWwiOiJtb2RldmNvMDVAZ21haWwuY29tIiwicm9sZSI6bnVsbCwiYXBpX3Rva2VuIjpudWxsLCJzdGF0dXMiOiJpbmFjdGl2ZSIsInNtc19hcGlfbG9naW4iOiJlc2tpejIiLCJzbXNfYXBpX3Bhc3N3b3JkIjoiZSQkayF6IiwidXpfcHJpY2UiOjUwLCJ1Y2VsbF9wcmljZSI6MTE1LCJ0ZXN0X3VjZWxsX3ByaWNlIjpudWxsLCJiYWxhbmNlIjo1MDAwLCJpc192aXAiOjAsImhvc3QiOiJzZXJ2ZXIxIiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTNUMTQ6NTU6MjUuMDAwMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTEzVDE0OjU1OjI2LjAwMDAwMFoiLCJ3aGl0ZWxpc3QiOm51bGx9LCJpYXQiOjE2ODEzOTgwOTIsImV4cCI6MTY4Mzk5MDA5Mn0.kvapqtuAlMBmVxO6I0DAFP5NHBeh2LTF4XAoAhujo_o'
     const [msg , setMsg ] = useState('')
     const [openModal , setOpenModal] = useState(false)
+
+    
 
     const handaleClose = () => {
         setOpenModal(true)
@@ -14,7 +16,8 @@ const SendSms = () => {
     const handleOpen = () => {
         setOpenModal(false)
     }
-    
+
+
 
 
     const time = new Date()
@@ -38,6 +41,8 @@ const SendSms = () => {
       }
 
 
+    //   useEffect(() => {  
+    //   }, [])
 
 
 
@@ -70,23 +75,6 @@ const SendSms = () => {
 
 
         <div className='py-[100px] text-[white] flex flex-col'>
-            {/* <div className=' flex justify-between items-center gap-10 text-[#999] border-b-[2px] pb-2'>
-                <p>BUGUN</p>
-                <p>ISM FAMILIYA</p>
-                <p>TELEFON</p>
-                <p> FAN</p>
-                <p>ISH VAQTI</p>
-                <p>HABAR JO’NATISH </p>
-            </div>
-
-            <div className=' flex items-center'>
-                <p>{`${h} : ${m}`}</p>
-                <p>Husniddin Muhtorov</p>
-                <p>+998 91 282 42 62</p>
-                <p>3D MAX</p>
-                <p>08:00 - 20:00</p>
-                <i class="fa-solid fa-message fa-shake"></i>
-            </div> */}
 
             <table>
                 <thead>
@@ -193,10 +181,12 @@ const SendSms = () => {
                     <td>08:00 - 20:00</td>
                     <td > <i class="fa-solid fa-message fa-shake msg" onClick={() => handaleClose()}></i></td>
                 </tr>
-
+                
                 
                 </tbody>
             </table>
+
+           
         </div>
 
     </div>
